@@ -35,16 +35,26 @@
                     var ele2 = Math.round(Math.random())
 
                     if (ele2 == 0) {
-                        document.getElementById("text").innerHTML = '<i>Makes files</i>'
+                        var ele3 = Math.round(Math.random())
+                        if (ele3 == 0) {
+                             document.getElementById("text").innerHTML = '<i>Makes files</i>'
+                        } else {
+                             document.getElementById("text").innerHTML = '<i>Downloads files</i>'
+                        }
                     } else {
                         document.getElementById("text").innerHTML = '<i>Gets YouTube videos</i>'
                     }
                 } else {
                         var ele2 = Math.round(Math.random())
                         if (ele2 == 0) {
-                            document.getElementById("text").innerHTML = '<i>Makes memes</i>'
-                        } else {
-                            document.getElementById("text").innerHTML = '<i>Searches the Internet</i>'
+                            var ele3 = Math.round(Math.random())
+                            if (ele3 == 0) {
+                                 document.getElementById("text").innerHTML = '<i>Makes polls</i>'
+                            } else {
+                                 document.getElementById("text").innerHTML = '<i>Makes memes</i>'
+                            }
+                            } else {
+                                 document.getElementById("text").innerHTML = '<i>Searches the Internet</i>'
                     }
                 }
               
