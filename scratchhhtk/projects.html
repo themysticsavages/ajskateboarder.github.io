@@ -13,7 +13,7 @@
       }
       fetch(`https://api.scratch.mit.edu/projects/${getParameterByName('id')}`)
       .then(res => res.json())
-      .then(document.getElementById('project').innerHTML = res['title'])
+      .then(res => document.getElementById('project').innerHTML = res['title'])
     }
   </script>
 </html>
