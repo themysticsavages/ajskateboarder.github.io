@@ -14,6 +14,7 @@
       fetch(`https://apiscratchhhtk.ajskateboarder.repl.co/projects/${getParameterByName('id')}`)
       .then(res => res.json())
       .then(project => console.log(project))
+      .catch(err => console.log(`Oh no! You stumbled to an error! This is mostly an issue with YOUR client. Here's the detailed error. ${err}`))
     }
   </script>
 </html>
