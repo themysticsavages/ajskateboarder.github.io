@@ -13,8 +13,7 @@
       }
       fetch(`https://apiscratchhhtk.ajskateboarder.repl.co/projects/${getParameterByName('id')}`)
       .then(res => res.json())
-      .then(res => document.getElementById('project').innerHTML = res['title']+' by '+res['author']['username'])
-      console.log('Fetched response!')
+      .then(project => console.log(project))
     }
   </script>
 </html>
