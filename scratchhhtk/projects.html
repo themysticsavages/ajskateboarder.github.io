@@ -11,9 +11,10 @@
         if (!results[2]) return '';
         return decodeURIComponent(results[2].replace(/\+/g, ' '));
       }
-      fetch(`https://api.scratch.mit.edu/projects/${getParameterByName('id')}`)
+      fetch(`https://apiscratchhhtk.ajskateboarder.repl.co/projects/${getParameterByName('id')}`)
       .then(res => res.json())
-      .then(res => document.getElementById('project').innerHTML = res['title'])
+      .then(res => document.getElementById('project').innerHTML = res['title']+' by '+res['author']['username'])
+      console.log('Fetched response!')
     }
   </script>
 </html>
