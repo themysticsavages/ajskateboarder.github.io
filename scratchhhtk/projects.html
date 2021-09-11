@@ -12,7 +12,7 @@
         return decodeURIComponent(results[2].replace(/\+/g, ' '));
       }
       try {
-        fetch(`https://apiscratchhhtk.ajskateboarder.repl.co/projects/${getParameterByName('id')}`)
+        fetch(`https://scratchapinc.herokuapp.com/projects/${getParameterByName('id')}`)
         .then(res => res.json())
         .then(project => console.log(project))
       } catch (err) { console.log(`Oh no! An error!\n ${err}`) }  
