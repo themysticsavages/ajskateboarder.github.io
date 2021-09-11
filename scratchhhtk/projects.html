@@ -34,7 +34,7 @@
           .then(res => res.json())
           .then(json => {
               document.getElementById('title').innerText = json['title']
-              document.getElementById('desc').innerText = encodeURIComponent(json['description'])
+              document.getElementById('desc').innerText = json['description']
           })
         } catch (err) { console.log(`Oh no! An error!\n ${err}`) }  
       }
