@@ -34,8 +34,7 @@
           .then(res => res.json())
           .then(json => {
               document.getElementById('title').innerText = json['title']
-              if (json['description'] === null) return document.getElementById('descel').remove()
-              document.getElementById('description').innerText = encodeURIComponent(json['description'])
+              document.getElementById('desc').innerText = encodeURIComponent(json['description'])
           })
         } catch (err) { console.log(`Oh no! An error!\n ${err}`) }  
       }
