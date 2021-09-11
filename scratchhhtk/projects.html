@@ -38,7 +38,7 @@
                  fetch(`https://scratchapinc.herokuapp.com/projects/${json['remix']['root']}`)
                  .then(res => res.json())
                  .then(fullres => document.getElementById('remix') = `Remix of ${fullres['title']} by ${fullres['author']['username']}`)
-              }
+              } else { document.getElementById('remix').remove() }
           })
         } catch (err) { console.log(`Oh no! An error!\n ${err}`) }  
       }
