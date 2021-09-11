@@ -3,13 +3,7 @@
     <link rel="shortcut icon" type="image/jpg" href="https://i.imgur.com/VP7JQ2a.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <meta property="og:title" content="//project-title" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://scratchhh.tk/projects/.id." />
-    <meta property="og:image" content="https://cdn2.scratch.mit.edu/get_image/project/.id._640x372.png" />
-    <meta property="og:description" content="//description" />
-
-    <meta name="twitter:card" content="summary_large_image">
+    
     <style>
         .jdiv { background-color: #404040; color: #ffffff; width: 450px; padding: 20px; margin: 15px; }
         h2 { margin: 15px; color: white; }
@@ -24,6 +18,7 @@
         padding: 10px;
         }
     </style>
+    
     <script type='text/javascript'>
       window.onload = function() {
         function getParameterByName(name, url = window.location.href) {
@@ -37,11 +32,10 @@
         try {
           fetch(`https://scratchapinc.herokuapp.com/projects/${getParameterByName('id')}`)
           .then(res => res.json())
-          .then(json => document.getElementById('project').innerText = json['title'])
+          .then(json => document.getElementById('title').innerText = json['title'])
         } catch (err) { console.log(`Oh no! An error!\n ${err}`) }  
       }
     </script>
-    <title>//project-title</title>
     <body style="background-color: #282828;">
             <div class="topnav">
                 <a class="active" href="/"><img src="https://i.imgur.com/VP7JQ2a.png" width="25"></a>
@@ -50,7 +44,7 @@
               </div>
             <br>
     <h2 style="margin: 15px; color:#ffffff">
-        <a href='../..'><img src="https://i.imgur.com/VP7JQ2a.png" height="30"></a> //project-title
+        <a href='../..'><img src="https://i.imgur.com/VP7JQ2a.png" height="30"></a> <p id='title'>...</p>
         <br>
         <p style="font-size: small;">//rmixstatus</p>
     </h2>
