@@ -34,11 +34,8 @@
           .then(res => res.json())
           .then(json => {
               document.getElementById('title').innerText = json['title']
-              if (!json['remix']['root'] === null) {
-                 fetch(`https://scratchapinc.herokuapp.com/projects/${json['remix']['root']}`)
-                 .then(res => res.json())
-                 .then(fullres => document.getElementById('remix') = `Remix of ${fullres['title']} by ${fullres['author']['username']}`)
-              } else { document.getElementById('remix').remove() }
+              if (json['description'] === null) return document.getElementById('descel').remove()
+              document.getElementById('description').innerText = encodeURIComponent(json['description'])
           })
         } catch (err) { console.log(`Oh no! An error!\n ${err}`) }  
       }
@@ -61,12 +58,10 @@
         <br><br> 👁 //views views • ⑂ //rem remixes • ✰ //stars stars • ♡ //loves loves
         <br> Wanna use this project locally? Download it <a href="./.id./get">here.</a>
     </div>
-    <!--1
-    <div class="jdiv">
+    <div class="jdiv" id='descel'>
        <h5>Description</h5>
-       //description
+       <p id='desc'>//description</p>
     </div>
-    1-->
     <div class="jdiv">
         <h5>Latest comments</h5>
         //comment1
