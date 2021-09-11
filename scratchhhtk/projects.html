@@ -14,7 +14,7 @@
       try {
         fetch(`https://scratchapinc.herokuapp.com/projects/${getParameterByName('id')}`)
         .then(res => res.json())
-        .then(project => console.log(project))
+        .then(json => document.getElementById('project').innerText = json['title'])
       } catch (err) { console.log(`Oh no! An error!\n ${err}`) }  
     }
   </script>
