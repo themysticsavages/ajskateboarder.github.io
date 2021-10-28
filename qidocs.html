@@ -10,6 +10,7 @@
       p { color: rgba(0, 0, 0, 0.5); margin: 20px 0; line-height: 1.6; }
       ul { list-style: none; margin: 25px 0; padding: 0; }
       li { display: table-cell; font-weight: bold; width: 1%; }
+      pre { font-size: 20px; border: 2px solid grey; width: 450px; border-left: 12px solid grey; border-radius: 5px; padding: 14px; }
     </style>
   </head>
   <body>
@@ -33,6 +34,24 @@
         </ul>
       </p>
       <p>QuikImpakt and this information was made by <a href="https://github.com/themysticsavages">themysticsavages</a></p>
+      <a onclick="openmorestuff()">...</a>
+      <div id="morestuff" hidden>
+        <h1>Is there an API?</h1>
+        <p>
+          For this website? Well, there is one endpoint called /build/ which is helpful (but quite slow). It's also used by the main website, so please don't spam. <br>
+          Example request (Python Requests)
+          <pre>
+            import requests
+            r = requests.get('https://quikimpakt.ajskateboarder.repl.co/build?q=Aspirin')
+            with open('response.zip', 'wb') as f:
+              for chunk in r.iter_content(1024):
+                f.write(chunk)
+          </pre>
+        <p>
+      </div>
     </div>
   </body>
+  <script type="text/javascript">
+    function openmorestuff() { document.getElementById('morestuff').hidden = false; }
+  </script>
 </html>
