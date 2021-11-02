@@ -1,40 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
-    
-    <link rel="shortcut icon" href="./assets/avatar.png">
-    <title>themysticsavages</title>
-
-    <script src="./fetch.js"></script>
-    <link rel="stylesheet" href="./styles.css">
-    <div class="bg"></div>
-
+    <head>
+        <style>
+			* {
+			font-family: "Arial"
+			}
+			a {
+			color: white;
+			text-decoration: none;
+			}
+			body {
+			background: 
+				url("https://media.idownloadblog.com/wp-content/uploads/2020/06/macOS-Big-Sur-Daylight-Wallpaper-iDownloadBlog-2-1472x1472.jpg");
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+			}
+            div {
+            position: absolute;
+            top: 0;
+			-webkit-backdrop-filter: blur(10px);
+  			backdrop-filter: blur(10px);
+			text-shadow: 
+				0 0 10px #fff, 
+				0 0 20px #fff, 
+				0 0 30px #fff;
+            height: 300px;
+            width: 400px;
+			color: white;
+            background: rgb(49, 56, 51, 0.5);
+            line-height: 20px;
+            border-radius: 15px 15px 15px 15px;
+            }
+			#close {
+			float: right;
+			border: none;
+			background-color: black;
+			color: white;
+			border-radius: 15px 15px 15px 15px;
+			}
+			#close:hover {
+			background-color: #909090;
+			}
+			#dockblock{
+			position: absolute;
+			padding: 5px;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: rgb(49, 56, 51, 0.8);
+			text-align: center;
+			border-radius: 50px 50px 50px 50px
+			-webkit-backdrop-filter: blur(10px);
+  			backdrop-filter: blur(10px);
+			}
+			.dockitem{
+			display: inline-block;
+			}
+        </style>
+    </head>
     <body>
-        <br>
-        <h2><img src="./assets/avatar.png" height="40"> Hey there!</h2>
-        <hr class="header">
-        <stuff>I'm themysticsavages, also known as ajskateboarder! Lovely site this is, isn't it? <br><br></stuff>
-        <iframe src="https://scratchhh.xyz/projects/569068479/embed/" width="450" height="265" style="border: none; margin-left: 10px;"></iframe>
-
-        <br><br>
-
-        <h2>Recent repos</h2>
-        <hr class="header">
-        <a href='#' id='id1'><p id='proj1'></p></a> <a href='#' id='id2'><p id='proj2'></p></a> <a href='#' id='id3'><p id='proj3'></p></a><br>
-        <stuff><a href="https://github.com/themysticsavages"><stuff>All repositories ><br></stuff></a>
-
-        <br>
-
-        <h2>Some websites</h2>
-        <hr class="header">
-        <a href="./scratchhh.html"><p>Scratchhh.tk<br><sub>A better scratch.mit.edu</sub></p></a> <a href="./botpost.html"><p>Somebot.tk<br><sub>Random bot posting thing</sub></p></a>
-
-        <br><br>
-
-        <h2>Other places</h2>
-        <hr class="header">
-
-        <a href="https://scratch.mit.edu/users/ajskateboarder"><img src="./assets/scratch.png" class="pict" height="50"></a> <a href="https://www.youtube.com/channel/UCOvoqZwGXZ1ix4AIrtHDBuw"><img src="./assets/youtube.png" class="pict" height="50"></a>
+        <canvas id="canvas" class="canvas"></canvas>
+        <div id="div2">
+			<button id="close" onclick="document.getElementById('div2').remove()">X</button>
+			<br>&nbsp;Recent repositories:
+			<ul>
+				<li>
+					<a href="#" id="id1">
+						<p id="proj1"></p>
+					</a>
+				</li>
+				<li>
+					<a href="#" id="id2">
+						<p id="proj2"></p>
+					</a>
+				</li>
+				<li>
+					<a href="#" id="id3">
+						<p id="proj3"></p>
+					</a>
+				</li>
+			<br>
+		</div>
+        <div id="div3">
+			<button id="close" onclick="document.getElementById('div3').remove()">X</button>
+			<br>&nbsp;I'm not the worst at programming. I know Python, JavaScript, and C++ relatively well, and I make decent websites!
+			<br>&nbsp;Here are my most popular:<br>
+			<ul>
+				<li><a href="https://quikimpa.tk">quikimpa.tk</a></li>
+				<li><a href="https://sulphurous.cf">sulphurous.cf</a></li>
+			</ul>
+			&nbsp;<img src="https://quikimpa.tk/assets/logo.png" height="50"><img src="https://raw.githubusercontent.com/ajskateboarder/stuff/main/more/logo.png" height="50">
+		</div>
+        <div id="div4">
+			<button id="close" onclick="document.getElementById('div4').remove()">X</button>
+			<br>&nbsp;Hello there!
+			<br>&nbsp;I am themysticsavages, or commonly known as ajskateboarder. Yes, I made up that name. And yes, I don't use a skateboard...
+			<br><br>&nbsp;<img src="https://avatars.githubusercontent.com/u/81255936" height="50"><img src="https://avatars.githubusercontent.com/u/82041621" height="50">
+		</div>
+		<span id="dockblock">
+			<span class="dockitem">
+				<a href="about:blank"><img src="https://assets.stickpng.com/images/5a059a879cf05203c4b6045a.png" height="30"></a>
+			</span>&nbsp;
+			<span class="dockitem">
+				<a href="https://github.com/themysticsavages" target="blank"><img src="https://github.com/favicon.ico" height="30"></a>
+			</span>&nbsp;
+			<span class="dockitem">
+				<a href="https://scratch.mit.edu/users/ajskateboarder" target="blank"><img src="https://scratch.mit.edu/favicon.ico" height="30"></a>
+			</span>
+			<span class="dockitem">
+				<img src="https://logos-world.net/wp-content/uploads/2020/12/Discord-Logo.png" height="30" onclick="alert('themysticsavages#3187')">
+			</span>
+		</span>
+        <script type="text/javascript">
+            divs = document.getElementsByTagName("div");
+            for (div of divs) div.onmousedown = onMouseDown;
+            
+            document.onmousemove = onMouseMove;
+            document.onmouseup   = onMouseUp;
+            
+            canvas.width = window.innerWidth - 20;
+            canvas.height = window.innerHeight - 20;
+            
+            var the_moving_div = ''; 
+            var the_last_mouse_position = { x:0, y:0 };
+            
+            function onMouseDown(e) {
+                e.preventDefault();
+                the_moving_div            = e.target.id;      
+                the_last_mouse_position.x = e.clientX;        
+                the_last_mouse_position.y = e.clientY;
+                e.target.style.border = "2px solid white";     
+            
+                var divs = document.getElementsByTagName("div");
+                e.target.style.zIndex = divs.length;          
+                var i = 1; for (div of divs) if (div.id != the_moving_div) div.style.zIndex = i++;   
+            }
+            
+            function onMouseMove(e) {
+                e.preventDefault();
+                if (the_moving_div == "") return;
+                var d = document.getElementById(the_moving_div);
+                d.style.left = d.offsetLeft + e.clientX - the_last_mouse_position.x + "px";     
+                d.style.top  = d.offsetTop  + e.clientY - the_last_mouse_position.y + "px";
+                the_last_mouse_position.x = e.clientX;                                          
+                the_last_mouse_position.y = e.clientY;
+            }
+            
+            function onMouseUp(e) {
+                e.preventDefault();
+                if (the_moving_div == "") return;
+                document.getElementById(the_moving_div).style.border = "none"; 
+                the_moving_div = "";
+            }
+        </script>
+		<script src="https://ajskateboarder.github.io/fetch.js" type="text/javascript" crossorigin="anonymous"></script>
     </body>
 </html>
