@@ -2,115 +2,115 @@
 <html>
     <head>
         <style>
-			* {
-			font-family: "Arial"
-			}
-			a {
-			color: white;
-			text-decoration: none;
-			}
-			body {
-			background: 
-				url("https://media.idownloadblog.com/wp-content/uploads/2020/06/macOS-Big-Sur-Daylight-Wallpaper-iDownloadBlog-2-1472x1472.jpg");
-			background-repeat: no-repeat;
-			background-size: 100% auto;
-			}
+	    * {
+	    font-family: "Arial"
+	    }
+	    a {
+	    color: white;
+            text-decoration: none;
+	    }
+	    body {
+	    background: 
+	    url("https://media.idownloadblog.com/wp-content/uploads/2020/06/macOS-Big-Sur-Daylight-Wallpaper-iDownloadBlog-2-1472x1472.jpg");
+	    background-repeat: no-repeat;
+	    background-size: 100% auto;
+	    }
             div {
             position: absolute;
             top: 0;
-			-webkit-backdrop-filter: blur(10px);
-  			backdrop-filter: blur(10px);
-			text-shadow: 
-				0 0 10px #fff, 
-				0 0 20px #fff, 
-				0 0 30px #fff;
+	    -webkit-backdrop-filter: blur(10px);
+  	    backdrop-filter: blur(10px);
+	    text-shadow: 
+            0 0 10px #fff, 
+	    0 0 20px #fff, 
+	    0 0 30px #fff;
             height: 300px;
             width: 400px;
-			color: white;
+	    color: white;
             background: rgb(49, 56, 51, 0.5);
             line-height: 20px;
             border-radius: 15px 15px 15px 15px;
             }
-			#close {
-			float: right;
-			border: none;
-			background-color: black;
-			color: white;
-			border-radius: 15px 15px 15px 15px;
-			}
-			#close:hover {
-			background-color: #909090;
-			}
-			#dockblock{
-			position: absolute;
-			padding: 5px;
-			right: 0;
-			bottom: 0;
-			width: 100%;
-			background-color: rgb(49, 56, 51, 0.8);
-			text-align: center;
-			border-radius: 50px 50px 50px 50px
-			-webkit-backdrop-filter: blur(10px);
-  			backdrop-filter: blur(10px);
-			}
-			.dockitem{
-			display: inline-block;
-			}
+	    #close {
+	    float: right;
+	    border: none;
+            background-color: black;
+	    color: white;
+	    border-radius: 15px 15px 15px 15px;
+	    }
+	    #close:hover {
+	    background-color: #909090;
+	    }
+	    #dockblock{
+	    position: absolute;
+            padding: 5px;
+	    right: 0;
+	    bottom: 0;
+	    width: 100%;
+	    background-color: rgb(49, 56, 51, 0.8);
+	    text-align: center;
+	    border-radius: 50px 50px 50px 50px
+  	    -webkit-backdrop-filter: blur(10px);
+	    backdrop-filter: blur(10px);
+	    }
+	    .dockitem{
+	    display: inline-block;
+	    }
         </style>
     </head>
     <body>
         <canvas id="canvas" class="canvas"></canvas>
         <div id="div2">
-			<button id="close" onclick="document.getElementById('div2').remove()">X</button>
-			<br>&nbsp;Recent repositories:
-			<ul>
-				<li>
-					<a href="#" id="id1">
-						<p id="proj1"></p>
-					</a>
-				</li>
-				<li>
-					<a href="#" id="id2">
-						<p id="proj2"></p>
-					</a>
-				</li>
-				<li>
-					<a href="#" id="id3">
-						<p id="proj3"></p>
-					</a>
-				</li>
-			<br>
-		</div>
+		<button id="close" onclick="document.getElementById('div2').remove()">X</button>
+		<br>&nbsp;Recent repositories:
+		<ul>
+		  <li>
+		    <a href="#" id="id1">
+		      <p id="proj1"></p>
+		    </a>
+		  </li>
+		  <li>
+		    <a href="#" id="id2">
+		      <p id="proj2"></p>
+		    </a>
+		  </li>
+		  <li>
+		    <a href="#" id="id3">
+		      <p id="proj3"></p>
+		    </a>
+		  </li>
+		<br>
+	</div>
         <div id="div3">
-			<button id="close" onclick="document.getElementById('div3').remove()">X</button>
-			<br>&nbsp;I'm not the worst at programming. I know Python, JavaScript, and C++ relatively well, and I make decent websites!
-			<br>&nbsp;Here are my most popular:<br>
-			<ul>
-				<li><a href="https://quikimpa.tk">quikimpa.tk</a></li>
-				<li><a href="https://sulphurous.cf">sulphurous.cf</a></li>
-			</ul>
-			&nbsp;<img src="https://quikimpa.tk/assets/logo.png" height="50"><img src="https://raw.githubusercontent.com/ajskateboarder/stuff/main/more/logo.png" height="50">
-		</div>
+		<button id="close" onclick="document.getElementById('div3').remove()">X</button>
+		<br>&nbsp;I'm not the worst at programming. I know Python, JavaScript, and C++ relatively well, and I make decent websites!
+		<br>&nbsp;Here are my most popular:<br>
+		<ul>
+			<li><a href="https://quikimpa.tk">quikimpa.tk</a></li>
+			<li><a href="https://sulphurous.cf">sulphurous.cf</a></li>
+		</ul>
+		&nbsp;<img src="https://quikimpa.tk/assets/logo.png" height="50"><img src="https://raw.githubusercontent.com/ajskateboarder/stuff/main/more/logo.png" height="50">
+	</div>
         <div id="div4">
-			<button id="close" onclick="document.getElementById('div4').remove()">X</button>
-			<br>&nbsp;Hello there!
-			<br>&nbsp;I am themysticsavages, or commonly known as ajskateboarder. Yes, I made up that name. And yes, I don't use a skateboard...
-			<br><br>&nbsp;<img src="https://avatars.githubusercontent.com/u/81255936" height="50"><img src="https://avatars.githubusercontent.com/u/82041621" height="50">
-		</div>
-		<span id="dockblock">
-			<span class="dockitem">
-				<a href="about:blank"><img src="https://assets.stickpng.com/images/5a059a879cf05203c4b6045a.png" height="30"></a>
-			</span>&nbsp;
-			<span class="dockitem">
-				<a href="https://github.com/themysticsavages" target="blank"><img src="https://github.com/favicon.ico" height="30"></a>
-			</span>&nbsp;
-			<span class="dockitem">
-				<a href="https://scratch.mit.edu/users/ajskateboarder" target="blank"><img src="https://scratch.mit.edu/favicon.ico" height="30"></a>
-			</span>
-			<span class="dockitem">
-				<img src="https://logos-world.net/wp-content/uploads/2020/12/Discord-Logo.png" height="30" onclick="alert('themysticsavages#3187')">
-			</span>
+		<button id="close" onclick="document.getElementById('div4').remove()">X</button>
+		<br>&nbsp;Hello there!
+		<br>&nbsp;I am themysticsavages, or commonly known as ajskateboarder. Yes, I made up that name. And yes, I don't use a skateboard...
+		<br><br>&nbsp;<img src="https://avatars.githubusercontent.com/u/81255936" height="50"><img src="https://avatars.githubusercontent.com/u/82041621" height="50">
+	</div>
+	<span id="dockblock">
+		<span class="dockitem">
+			<a href="about:blank"><img src="https://ajskateboarder.github.io/assets/power.png" height="30"></a>
+		</span>&nbsp;
+		<span class="dockitem">
+			<a href="https://github.com/themysticsavages" target="blank"><img src="https://github.com/favicon.ico" height="30"></a>
+		</span>&nbsp;
+		<span class="dockitem">
+			<a href="https://scratch.mit.edu/users/ajskateboarder" target="blank"><img src="https://scratch.mit.edu/favicon.ico" height="30"></a>
 		</span>
+		<span class="dockitem">
+			<img src="https://logos-world.net/wp-content/uploads/2020/12/Discord-Logo.png" height="30" onclick="alert('themysticsavages#3187')">
+		</span>
+	</span>
         <script type="text/javascript">
             divs = document.getElementsByTagName("div");
             for (div of divs) div.onmousedown = onMouseDown;
@@ -153,6 +153,6 @@
                 the_moving_div = "";
             }
         </script>
-		<script src="https://ajskateboarder.github.io/fetch.js" type="text/javascript" crossorigin="anonymous"></script>
+	<script src="https://ajskateboarder.github.io/fetch.js" type="text/javascript" crossorigin="anonymous"></script>
     </body>
 </html>
